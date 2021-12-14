@@ -158,13 +158,12 @@ namespace Graphs
     public class GraphVisualizationData
     {
         public readonly Graph RawGraph;
-        public readonly Vertex[] HighlightedVertexes;
-        public readonly EdgeData[] HighlightedEdges;
-        public GraphVisualizationData(Graph rawGraph, Vertex[] highlightedVertexes, EdgeData[] highlightedEdges)
+        public Vertex[] HighlightedVertexes { get; set; }
+        public EdgeData[] HighlightedEdges { get; set; }
+      
+        public GraphVisualizationData(Graph rawGraph)
         {
             RawGraph = rawGraph;
-            HighlightedVertexes = highlightedVertexes;
-            HighlightedEdges = highlightedEdges;
         }
     }
 }
